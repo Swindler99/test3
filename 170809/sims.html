@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学生管理系统功能练习</title>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			var server="http://172.13.16.2:8900/school/";
+			var courseAdd=false;
+			$(function(){
+				$("#addCourse").on("click",function(){
+					var data={
+						name:$("#courseName").val(),
+						credit:$("#courseCredit").val(),
+						content:$("#courseContent").val()
+					}
+					if(courseAdd){
+						$.post(server+"course/add",data,function(r){
+							console.log(r.result+","+r.message);
+						})
+					}				
+				})
+				$("#courseName").on("blur",function(){
+					var data={
+						name:$("#courseName").val(),
+						credit:$("#courseCredit").val(),
+						content:$("#courseContent").val()
+					}
+					$.get(server+'course/isexist/'+($("#courseName").val()),function(r){
+						if(!r.data){
+							courseAdd=true;
+							$("#tips").text("");
+						}else{
+							$("#tips").text("已存在该课程");
+						}
+					})	
+				})
+				$("#displayCourses").click(function(){
+					$.get(server+"course/list",function(r){
+						for (var i=0;i<r.data.length;i++) {
+							var newTr=document.createElement("tr");
+							for (var j in r.data[i]) {
+								$(newTr).append("<td>"+r.data[i][j]+"</td>");
+							}
+							$("#courseTable").append(newTr);
+						}
+					})
+				})
+			})
+		</script>
+		<style>
+			#courseTable{
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			#courseTable td,#courseTable th{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			增加课程<br />
+			课程名：<input type="text" name="name" id="courseName" value="" /><span id="tips"></span><br />
+			学分：<input type="text" name="credit" id="courseCredit" value=""/><br />
+			内容：<input type="text" name="content" id="courseContent" value=""/><br />
+			<button id="addCourse">添加</button>
+			<button id="displayCourses">查看课程</button>
+			<table id="courseTable">
+				<tr>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>CREDIT</th>
+					<th>CONTENT</th>
+				</tr>
+			</table>
+			修改课程信息<br />
+			ID:<input type="number" name="id" id="updateId" value="" /><br />
+			课程名：<input type="text" name="name" id="updateName"/><br />
+			学分：<input type="text" name="credit" id="updateCredit"/><br />
+			内容：<input type="text" name="content" id="updateContent"/><br />
+			<button id="updateCourse">修改</button>
+		</div>
+		<div>
+			
+		</div>
+	</body>
+</html>

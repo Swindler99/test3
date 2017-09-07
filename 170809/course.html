@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>课程信息表</title>
+		<link rel="stylesheet" type="text/css" href="css/course.css"/>
+		<script type="text/javascript" src="js/template.js"></script>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/lhgdialog.js?skin=iblack" type="text/javascript" charset="utf-8"></script>
+		<script src="js/course.js"></script>
+		<script id="tr" type="text/html">
+			{{each courses as course}}
+			<tr class="c">
+				<td><input type="checkbox" name="check" value="{{course.id}}" /></td>
+				<td>{{course.name}}</td>
+				<td>{{course.credit}}</td>
+				<td>{{course.content}}</td>
+				<td><a href="javascript:void(0)" class="revise">修改</a>&nbsp;&nbsp;<a href="javascript:void(0)" class="delete">删除</a></td>
+			</tr>
+			{{/each}}
+		</script>
+		<script id="a" type="text/html">
+			{{each nums as i}}
+				<a href="javascrit:void(0)" class="page1">{{i}}</a>
+			{{/each}}			
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<form action="" id="searchForm">
+				<div class="searchName"><lable for="searchName">课程名:&nbsp;</lable><input type="text"/ id="searchName"></div>
+				<div class="searchCredit"><lable for="searchCredit">学分:&nbsp;</lable><input type="number" id="searchCredit"/></div>
+				<div class="button" id="search">查询</div>
+				<span id="result">
+				</span>
+			</form>
+			<div id="searchResult">
+				<div id="tdiv">
+					<table id="message" cellspacing="0">
+							<tr  style="font-size: 20px;height: 50px;">
+								<th colspan="5">课程信息列表</th>
+							</tr>
+							<tr>
+								<th id="checkAll"><input type="checkbox" id="all" indeterminate="true" />全选/取消</th>
+								<th style="width: 100px;">课程名</th>
+								<th style="width: 60px;">学分</th>
+								<th>内容</th>
+								<th style="width: 200px;">操作</th>
+							</tr>
+					</table>
+				</div>
+				<div class="button" id="add">添加</div>
+				<div class="button" id="del">删除选中</div>
+				<div id="pageturning">
+					<div id="pagediv">
+						<a href="javascript:void(0)" class="page" id="firstpage">首页</a>
+						<a href="javascript:void(0)" class="page" id="beforepage">上一页</a>
+						<div id="pagination">
+						</div>
+						<a href="javascript:void(0)" class="page" id="nextpage">下一页</a>
+						<a href="javascript:void(0)" class="page" id="lastpage">尾页</a>
+					</div>
+					<div id="inputpage">第<input type="text" name="pageto" id="pageto" value="1" />页，共<span id="pagenum">1</span>页</div>
+					<div id="selsctpagediv">
+						跳转
+						<select name="" id="selectpage">
+						</select>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<ul id="contextmeau">
+			<li><a href="javascript:void(0)" id="madd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增加</a></li>
+			<li><a href="javascript:void(0)" id="mrevise">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;修改</a></li>
+			<li><a href="javascript:void(0)" id="mdel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;删除</a></li>
+			<li><a href="javascript:void(0)" onclick="(function(){location='';})()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;刷新页面</a></li>
+		</ul>
+	</body>
+</html>
+
+

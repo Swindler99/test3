@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>增加课程</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<style>
+			#tips1,#tips2{
+				font-size: 10px;
+				margin-top: 8px;
+				padding-left: 0px;
+				color: red;
+			}
+			#tips1 img,#tips2 img{
+				float: left;
+				margin: 1px 2px 0px 0px;
+				vertical-align: middle;
+			}
+			.container {
+				margin-top: 15px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script src="js/addcourse.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<form>
+				<div class="form-group form-group-sm">
+					<label for="aName" class="control-label">课程名:</label>
+					<div class="row">
+						<div class="col-xs-7">
+							<input type="text" class="form-control" id="aName" />
+						</div>
+						<div class="col-xs-5" id="tips1"></div>
+					</div>
+
+				</div>
+				<div class="form-group form-group-sm">
+					<label for="aCredit" class="control-label">学分:</label>
+					<div class="row">
+						<div class="col-xs-7">
+							<input type="number" class="form-control" id="aCredit" />
+						</div>
+						<div class="col-xs-5" id="tips2"></div>
+					</div>
+
+				</div>
+				<div class="form-group form-group-sm">
+					<label for="aContent" class="control-label">内容:</label>
+					<div>
+						<input type="text" name="aContent" class="form-control" id="aContent" value="" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>

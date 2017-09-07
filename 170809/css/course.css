@@ -1,0 +1,267 @@
+*{
+	margin: 0px ;
+	padding: 0px;
+}
+
+body{
+	font-size: 14px;
+	background: url(../img/bg.jpg) no-repeat ;
+	background-size: cover;
+	color: #8080FF;
+}
+.content{
+	width: 940px;
+	height:718px;
+	padding: 20px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	background: rgba(0,0,0,0.5);
+}
+
+.searchName{
+	position: absolute;
+	left: 20px;
+	top: 30px;
+}
+.searchCredit{
+	position: absolute;
+	left: 200px;
+	top: 30px;
+}
+#search{
+	position: absolute;
+	left: 320px;
+	top:30px;
+}
+#result{
+	position: absolute;
+	top:33px;
+	left: 400px;
+	color: red;
+}
+.searchName input,#aName,#rName,#aContent,#rContent{
+	width: 100px;
+	border-radius:5px ;
+}
+#aContent,#rContent{
+	width: 250px;
+}
+#searchID,#searchCredit,#aID,#rID,#aCredit,#rCredit{
+	width: 50px;
+	border-radius:5px;
+}
+.button{
+	width: 60px;
+	height: 25px;
+	background-color: #999;
+	color: white;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+}
+#searchResult{
+	position: absolute;
+	top: 80px;
+}
+#search:hover,#add:hover,#del:hover,#cancel:hover{
+	background-color: #ccc;
+	color: #D02051;
+}
+
+#message{
+	position: relative;
+	margin: 0 auto;
+	width: 940px;
+	border: 2px solid black;
+	border-collapse:collapse;
+	background: white;
+	color: black;
+	
+}
+#message a{
+	text-decoration: none;
+}
+#message a:hover{
+	color: red;
+}
+.td1{
+	width: 80px;
+}
+.center{
+	text-align: center;
+}
+#message th{
+	border: 2px solid black;
+}
+#message td{
+	border: 2px solid black;
+}
+#message tr{
+	height: 30px;
+}
+#del{
+	display: inline-block;
+	width: 80px;
+	margin: 20px 50px;
+}
+#add{
+	display: inline-block;
+	margin: 20px 50px;
+}
+.c:nth-child(even){
+	background: #ededed;
+}
+.c:nth-child(odd){
+	background: white;
+}
+tr.c:hover{
+	background-color: #8080FF;
+}
+td.sort{
+	text-align: center;
+	width: 80px;
+}
+td.sort img{
+	margin:0 5px;
+}
+.photo{
+	padding: 2px;
+	font-size: 0;
+}
+.page,.page1{
+	text-decoration: none;
+	display: inline-block;
+	padding:0px 7px;
+	height: 25px;
+	background:#999999;
+	border-radius:5px;
+	line-height: 25px;
+	color: white;
+	margin: 0px 2px;
+}
+.page1:first-child{
+	color: #D02051;
+	background: #ededed;
+}
+#beforepage{
+	/*display: none;*/
+}
+#nextpage{
+	/*display: none;*/
+}
+#lastpage{
+	margin-right:30px ;
+	/*display: none;*/
+}
+#selsctpagediv{
+	display: inline-block;
+	margin-right:50px ;
+	float: right;
+	
+}
+#selectpage{
+	border-radius: 3px;
+}
+
+#pageto{
+	width: 15px;
+	border-radius: 3px;
+}
+
+#inputpage{
+	display: inline-block;
+	float: right;
+}
+
+#pagination{
+	display: inline-block;
+}
+#tdiv{
+	height: 530px;
+}
+.name{
+	width: 170px;
+}
+#pagediv{
+	display: inline-block;
+	float: left;
+}
+#addcontent,#revisecontent{
+	position: absolute;
+	left:150px ;
+	top: 200px;
+	background: white;
+	padding: 20px;
+	height: 100px;
+	width: 600px;
+	border: 1px solid #8080FF;
+	border-radius: 5px;
+	display: none;
+}
+#tdiv{
+	position: relative;
+}
+.aName,.aID,.aCredit{
+	float: left;
+	margin: 0 20px;
+}
+.aContent{
+	position: absolute;
+	left: 300px;
+	top: 58px;
+}
+#confirm,#rconfirm{
+	position: absolute;
+	top: 95px;
+	left: 200px;
+}
+#cancel,#rcancel{
+	position: absolute;
+	top: 95px;
+	left: 360px;
+}
+#tips1,#rtips1{
+	position: absolute;
+	top: 22px;
+	left:200px;
+	display: inline-block;
+	color: red;
+}
+#tips2{
+	position: absolute;
+	top: 62px;
+	left: 140px;
+	display: inline-block;
+	color: red;
+}
+#tips1 img,#rtips1 img,#tips2 img{
+	vertical-align: middle;
+}
+#contextmeau{
+	list-style: none;
+	width: 100px;
+	height: 75px;
+	background: white;
+	text-align: left;
+	padding: 10px 0;
+	position: absolute;
+	border: 1px solid #8080FF;
+	border-radius: 5px;
+	display: none;
+}
+
+#contextmeau li a{
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	width: 100px;
+}
+#contextmeau li a:hover{
+	background: #EDEDED;
+	color: #D02051;
+}
+#checkAll{
+	width: 80px;
+}

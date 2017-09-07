@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#revisecontent {
+				position: relative;
+				background: white;
+				padding: 20px;
+				height: 60px;
+				width: 600px;
+			}
+			
+			.rName{
+				float: left;
+				margin: 0 20px;
+			}
+			.rCredit{
+				position: absolute;
+				top: 80px;
+				left: 40px;
+			}
+			.rContent {
+				position: absolute;
+				left: 300px;
+				top: 80px;
+			}
+			
+			#rName,
+			#rContent {
+				width: 100px;
+				border-radius: 5px;
+			}
+			
+			#rContent {
+				width: 250px;
+			}
+			
+			#rCredit {
+				width: 50px;
+				border-radius: 5px;
+			}
+			#tips1{
+				position: absolute;
+				top: 25px;
+				left: 210px;
+				display: inline-block;
+				color: red;
+			}
+			#tips1 img,#tips2 img{
+				float: left;
+				margin: 1px 2px 0px 0px;
+				vertical-align: middle;
+			}
+			#tips2 {
+				position: absolute;
+				top: 85px;
+				left: 145px;
+				display: inline-block;
+				color: red;
+			}
+			#rid{
+				display: none;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script src="js/revisecourse.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<form id="revisecontent">
+			<div class="rName">
+				<lable>课程名:&nbsp;</lable><input type="text" / id="rName"></div>
+			<div style="font-size: 10px;" id="tips1"></div> <br /><br />
+			<div class="rCredit">
+				<lable>学分:&nbsp;</lable><input type="number" id="rCredit" /></div>
+			<div style="font-size: 10px;" id="tips2"></div>
+			<div class="rContent">
+				<lable>内容:&nbsp;</lable><input type="text" name="rContent" id="rContent" value="" /></div>
+			<input type="text"  id="rid" value="" />
+		</form>
+	</body>
+
+</html>
